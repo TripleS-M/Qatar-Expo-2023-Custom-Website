@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qatar Expo 2023</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="index.html"><img src="https://www.dohaexpo2023.gov.qa/Images/Asset54x.png" width="200" height="60"></a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a class="cta" href="contact.html"><button>Contact</button></a></li>
+            <div class="darkmodeimg">
+              <li><img src="images/sun.png" id="icon"></li>
+            </div>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"></div>
+  <div class="about">
+    <div class="content">
+    </div>
+  </div>
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+      <section class="container">
+        <div class="slider-wrapper">
+          <div class="slider">
+            <img id="slide-1" src="https://www.dohaexpo2023.gov.qa/media/sszbedsx/01_7-photo.jpg?anchor=center&mode=crop&width=1920&rnd=132826723493930000" />
+            <img id="slide-2" src="https://dohanews.co/wp-content/uploads/2023/07/01_5-photo.jpg" />
+            <img id="slide-3" src="https://dohanews.co/wp-content/uploads/2023/04/01_4-photo.jpeg" />
+          </div>
+          <div class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+          </div>
+        </div>
+      </section>
+      
+      <div class="center" id="about">
+        <h1>About Us</h1>
+        <br>
+          <iframe width="660" height="415" src="https://www.youtube.com/embed/tPqOQ5RM6-I" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <br>
+      </div>
+
+      <div class="row">
+        <div class="content column">
+          <br><br><br><br><br><br><br>
+          <h2>Event Details</h2>
+          <p>Location: Al Bidda Park</p>
+                <p>Date: 2 October 2023 - 28 March 2024</p>
+                <p>Time: All Day</p>
+                <h3>Ticket Purchase</h3>
+                <p>No tickets needed</p>
+                <p>Price: General entry - It's free!</p>
+        </div>
+        <div class="photo column">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4884.982312254148!2d51.517842541112486!3d25.299679700288863!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c52a6ed5dd39%3A0x7c0267cd404f00ed!2sAl%20Bidda%20Park%20-%20Rumaila%20Area!5e0!3m2!1sen!2sqa!4v1692879555858!5m2!1sen!2sqa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+        
+      <br><br><br><br>
+<div class="center">
+  <h1>This Year's Themes</h1>
+  <p>Expo 2023 Doha, Qatar revolves around "Green Desert, Better Environment," supported by four sub-themes:
+    <br>To make a green desert, collaboration is key, involving info exchange, tech use, and innovation in agriculture and lifestyle. Transforming deserts can combat desertification. Four sub-themes include:</p>
+   <p> <br>- Modern Agriculture: Innovations for safe, sustainable, affordable food.
+    <br>- Technology & Innovation: Shaping greener solutions, reducing fossil fuels, countering pollution, and enhancing agriculture.
+    <br>- Environmental Awareness: Fostering resource protection, nature connection, and sustainable growth.
+    <br>- Sustainability: Balancing economic, tech, environment, and social needs.</p>
+</div>
+      <div class="cntnr">
+        <div class="bx">
+          <div class="imgBx">
+            <div class="img2">
+            <img src="https://img.freepik.com/premium-photo/lake-shape-recycling-sign-middle-untouched-nature-ecological-metaphor-ecological-waste-management-sustainable-economical-lifestyle-3d-rendering_533392-502.jpg">
+          </div>
+        </div>
+          <div class="cntnt">
+            <h3>Sustainability</h3>
+            <p>Sustainability preserves biodiversity while supporting modern life. Balancing local and global needs, it ensures enduring resources and a green legacy.
+            <br><br><br>Our duty is to alter lifestyles, business practices, and policies, addressing environmental issues for future generations. Embracing new technologies, we redefine "modern" and blend tradition with innovation. Technology guides a shift to enhanced, sustainable agriculture.</p>
+          </div>
+        </div>
+        <div class="bx">
+          <div class="imgBx">
+            <div class="img2">
+            <img src="https://img.freepik.com/premium-photo/city-shaped-lake-middle-lush-forest-as-metaphor-eco-friendly-urbanism-modern-green-living-general-3d-rendering_533392-500.jpg">
+          </div>
+        </div>
+          <div class="cntnt">
+            <h3>Environmental Awareness</h3>
+            <p>A crucial aspect of environmental awareness emphasizes the delicate and essential nature of the physical environment. It firmly states that we possess the capability to address the challenges that jeopardize it, starting with the most significant issues. 
+              <br><br><br>Through this, we recognize our responsibility and potential to rectify and preserve our surroundings for current and future generations.</p>
+          </div>
+        </div>
+        <div class="bx">
+          <div class="imgBx">
+            <div class="img2">
+            <img src="https://media.istockphoto.com/id/1344923073/photo/a-lake-in-the-shape-of-human-footprints-in-the-middle-of-a-lush-forest-as-a-metaphor-for-the.jpg?s=612x612&w=0&k=20&c=59g2smz0LLQ2cbW9eR4NZ3PaIpXavYk5g46Vb2vAEQU=">
+          </div>
+        </div>
+          <div class="cntnt">
+            <h3>Modern Agriculture</h3>
+            <p>Our food production greatly affects desertification. Thus, the Green Desert, Better Environment initiative connects to creating balanced, sustainable ways of food production, merging tradition and tech.
+<br><br><br>Expo 2023 Doha Qatar seeks to bring people and ideas together, speeding up innovation in Modern Agriculture. The goal is to provide safe, sustainable, affordable food, for a growing global population.</p>
+          </div>
+        </div>
+        <div class="bx">
+          <div class="imgBx">
+            <div class="img2">
+            <img src="https://media.istockphoto.com/id/1343774494/photo/a-bulb-shaped-lake-in-the-middle-of-a-lush-forest-symbolizing-fresh-ideas-inventiveness-and.jpg?s=612x612&w=0&k=20&c=LWfZOu8JC0gZXkWiqztev3oZkw8cK4h8iI0i0MqEvqA=">
+          </div>
+        </div>
+          <div class="cntnt">
+            <h3>Technology & Innovation</h3>
+            <p>Technology and innovation play crucial roles in driving the progression of solutions aimed at achieving a balance between enhancing farming productivity and ensuring environmental sustainability.
+<br><br>It has a significant responsibility in steering away from the continuous usage of fossil fuels. It contributes to devising remedies for the challenges posed by urban industrial pollution and in the advancement of alternatives to chemical inputs heavily used in agriculture.</p>
+          </div>
+        </div>
+      </div>
+    <hr>
+    <h4 class="footer">Contact Center: 184</h4><h4 class="footer">Main Office Contact: +974 444263489</h4><h4 class="footer">Main Email: info@dohaexpo2023.gov.qa</h4>
+    <footer id="footer">
+        <h5>© Expo 2023 Doha, Qatar. All rights reserved</h5>
+      </footer>
+    
+      <script>
+        var icon=document.getElementById("icon");
+        icon.onclick=function(){
+          document.body.classList.toggle("dark-theme");
+          if(document.body.classList.contains("dark-theme")){
+            icon.src="images/moon.png"
+          }else{
+            icon.src="images/sun.png"
+          }
+        }
+      </script>
+
+</body>
+</html>

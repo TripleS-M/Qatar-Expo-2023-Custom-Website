@@ -1,0 +1,434 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Patrick Hand SC', cursive;
+font-family: 'Rubik', sans-serif;
+    background: linear-gradient(var(--primary-color),var(--footer));
+    min-height: 200vh;
+    transition: 0.6s ease;
+}
+
+:root{
+  --tab:#E4E6EB;
+  --primary-color:#537B2F;
+  --secondary-color:0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  --tertiary-color:#303030;
+  --swap:rgba(164,222,2,1);
+  --shadow2:0 30px 30px rgba(0,0,0,0.5);
+  --footer:#2D5128;
+  --footer2:#142C14;
+  --bw:black;
+  --wb:white;
+  --bg:black;
+}
+
+.dark-theme{
+  --primary-color:#18191A;
+  --secondary-color:0 1.5rem 3rem -0.75rem hsla(0, 100%, 100%, 0.25);
+  --tertiary-color:white;
+  --swap:rgba(164,222,2,1);
+  --shadow2:0 15px 15px rgba(255, 255, 255, 0.5);
+  --tab:#242526;
+  --footer:#141414;
+  --footer2:black;
+  --bw:white;
+  --wb:black;
+  --bg:var(--primary-color);
+}
+
+.darkmodeimg{
+  padding:5px 25px;
+}
+
+#icon{
+  width: 20px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::selection{
+background: rgb(0,123,255,0.3);
+}
+.content{
+max-width: 1250px;
+margin: auto;
+padding: 0 30px;
+}
+.navbar{
+position: fixed;
+width: 100%;
+z-index: 2;
+padding: 25px 0;
+transition: all 0.3s ease;
+}
+.navbar.sticky{
+background: var(--footer2);
+padding: 10px 0;
+box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.navbar .logo a{
+font-size: 30px;
+font-weight: 600;
+text-decoration: none;
+}
+.navbar .menu-list{
+display: inline-flex;
+}
+.menu-list li{
+list-style: none;
+}
+.menu-list li a{
+color: #fff;
+font-size: 18px;
+font-weight: 500;
+margin-left: 25px;
+text-decoration: none;
+transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+color: var(--swap);
+}
+.banner{
+  background: url(https://www.dohaexpo2023.gov.qa/media/k4yjoar4/31_imagem-3d.jpg?anchor=center&mode=crop&width=1920&rnd=132823248451770000) no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.about{
+padding: 30px 0;
+}
+.about .title{
+font-size: 38px;
+font-weight: 700;
+}
+.about p{
+padding-top: 20px;
+text-align: justify;
+}
+.icon{
+color: #fff;
+font-size: 20px;
+cursor: pointer;
+display: none;
+}
+.menu-list .cancel-btn{
+position: absolute;
+right: 30px;
+top: 20px;
+}
+@media (max-width: 1230px) {
+.content{
+  padding: 0 60px;
+}
+}
+@media (max-width: 1100px) {
+.content{
+  padding: 0 40px;
+}
+}
+@media (max-width: 900px) {
+.content{
+  padding: 0 30px;
+}
+}
+@media (max-width: 868px) {
+body.disabled{
+  overflow: hidden;
+
+}
+.icon{
+  display: block;
+}
+.icon.hide{
+  display: none;
+}
+.navbar .menu-list{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  max-width: 400px;
+  left: -100%;
+  top: 0px;
+  display: block;
+  padding: 40px 0;
+  text-align: center;
+  background:var(--footer);
+  transition: all 0.3s ease;
+}
+.navbar.show .menu-list{
+  left: 0%;
+}
+.navbar .menu-list li{
+  margin-top: 45px;
+}
+.navbar .menu-list li a{
+  font-size: 23px;
+  margin-left: -100%;
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.navbar.show .menu-list li a{
+  margin-left: 0px;
+}
+}
+@media (max-width: 380px) {
+.navbar .logo a{
+  font-size: 27px;
+}
+}
+
+button{
+  font-family: 'Patrick Hand SC', cursive;
+font-family: 'Rubik', sans-serif;
+  padding:5px 25px;
+  background-color: var(--swap);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+button:hover{
+  font-family: 'Patrick Hand SC', cursive;
+font-family: 'Rubik', sans-serif;
+  background-color: white;
+  color: var(--swap);
+}
+.center{
+  text-align: center;
+  color:var(--bw);
+  padding:0%;
+  transition: all 0.6s ease;
+}
+
+.column{
+  float: left;
+  color:var(--bw);
+  transition: all 1s ease;
+}
+
+.photo{
+  width:65%;
+}
+
+.row{
+  width: 70%;
+  text-align:left;
+  margin-right: 10%;
+  margin-left:19%;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+  
+  .topnav{
+    background: url("https://aiph.org/wp-content/uploads/2023/05/Logos.png");
+    padding:20px;
+    text-align: right;
+    position:fixed;
+    right:0;
+    top: 0;
+  }
+
+  .topcorner{
+    padding:20px;
+    position:fixed;
+    left:0;
+    top:0;
+  }
+
+  
+  .container {
+    padding: 2rem;
+  }
+  
+  .slider-wrapper {
+    position: relative;
+    max-width: 73rem;
+    margin: 0 auto;
+  }
+  
+  .slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: var(--secondary-color);
+    border-radius: 0.5rem;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+  }
+  
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+  }
+  
+  .slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .slider-nav a {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+  }
+  
+  .slider-nav a:hover {
+    opacity: 1;
+  }
+
+  iframe {
+    border-radius: 15px;
+    width: 100%;
+    max-width: 738px;
+    box-shadow: var(--secondary-color);
+    transition: all 0.8s ease;
+  }
+
+  .cntnr{
+    max-width: 1480px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    justify-content: space-around;
+  }
+  
+  
+  .bx{
+    position: relative;
+    width: 612px;
+    height: 408px;
+    background: var(--tertiary-color);
+    box-shadow: var(--secondary-color);
+    border-radius: 20px;
+    margin: 15px;
+    transition: all 0.8s ease;
+  }
+  
+  .bx .imgBx{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .bx .imgBx .img2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow:hidden;
+    transition: 0.5s;
+    border-radius: 15px;
+  }
+  
+  .bx:hover .imgBx .img2{
+    opacity: 0;
+  }
+  
+  .bx .cntnt{
+    border-radius: 15px;
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 80%;
+    height: 60px;
+    background:  var(--tab);
+    color: var(--tertiary-color);
+    transition: 0.5s;
+    overflow:hidden;
+    padding: 17px;
+    box-sizing: border-box; 
+    transition:all 0.6s ease;
+  }
+  
+  .bx:hover .cntnt {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .bx .cntnt h3{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .bx .cntnt p{
+    margin: 10px 0 0;
+    padding: 0;
+    opacity: 0;
+    line-height: 1.2em;
+    transition: 0.5s;
+    text-align: justify;
+    font-size: x-large;
+  }
+  
+  .bx:hover .cntnt p{
+    opacity: 1;
+    transition-delay: 0.3s;
+  }
+
+footer{
+    text-align:center;
+    background-color:var(--footer2);
+    color:white;
+    padding: 2%;
+    transition:all 1.2s ease;
+  }
+
+.footer{
+  text-align:center;
+    background-color:var(--footer);
+    color:white;
+    padding: 2%;
+    transition: all 0.5s ease;
+}
+

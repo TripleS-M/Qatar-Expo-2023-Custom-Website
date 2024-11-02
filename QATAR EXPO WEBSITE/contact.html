@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qatar Expo 2023</title>
+    <link rel="stylesheet" type="text/css" href="stylecontact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="index.html"><img src="https://www.dohaexpo2023.gov.qa/Images/Asset54x.png" width="200" height="60"></a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a class="cta" href="contact.html"><button>Contact</button></a></li>
+            <div class="darkmodeimg">
+              <li><img src="images/sun.png" id="icon"></li>
+            </div>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"></div>
+  <div class="about">
+    <div class="content">
+    </div>
+  </div>
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+    </script>
+
+    <section class="contact">
+        <div class="content">
+          <h2>Contact Details</h2>
+        </div>
+        <div class="container">
+          <div class="contactInfo">
+            <div class="box">
+              <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></a></div>
+                <div class="text">
+                  <h3>Address</h3>
+                  <p>7H56+67P, Doha</p>
+                </div>
+              </div>
+              <div class="box">
+                <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                  <div class="text">
+                    <h3>Phone</h3>
+                    <p>Main Office: +974 44263489</p>
+                    <p>Management: +974 4650211</p>
+                  </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                      <div class="text">
+                        <h3>Email</h3>
+                        <p>info@dohaexpo2023.gov.qa</p>
+                      </div>
+                    </div>
+        </div>
+        <div class="contactForm">
+            <form>
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>Full Name</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>Email</span>
+                </div>
+                <div class="inputBox">
+                    <textarea required="required"></textarea>
+                    <span>Type your Message...</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" name="" value="Send">
+                </div>
+            </form>
+        </div>
+        </div>
+      </section>
+
+      <script>
+        var icon=document.getElementById("icon");
+        icon.onclick=function(){
+          document.body.classList.toggle("dark-theme");
+          if(document.body.classList.contains("dark-theme")){
+            icon.src="images/moon.png"
+          }else{
+            icon.src="images/sun.png"
+          }
+        }
+      </script>
+<hr>
+<h4 class="footer">Contact Center: 184</h4><h4 class="footer">Main Office Contact: +974 444263489</h4><h4 class="footer">Main Email: info@dohaexpo2023.gov.qa</h4>
+
+<footer id="footer">
+    <h5>© Expo 2023 Doha, Qatar. All rights reserved</h5>
+  </footer>
+    
+</body>
+</html>

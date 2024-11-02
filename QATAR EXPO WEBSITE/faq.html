@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qatar Expo 2023</title>
+    <link rel="stylesheet" href="./stylefaq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <a href="index.html"><img src="https://www.dohaexpo2023.gov.qa/Images/Asset54x.png" width="200" height="60"></a>
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a class="cta" href="contact.html"><button>Contact</button></a></li>
+                <div class="darkmodeimg">
+                  <li><img src="images/sun.png" id="icon"></li>
+                </div>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="banner"></div>
+      <div class="about">
+        <div class="content">
+        </div>
+      </div>
+      <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+          navbar.classList.add("show");
+          menuBtn.classList.add("hide");
+          body.classList.add("disabled");
+        }
+        cancelBtn.onclick = ()=>{
+          body.classList.remove("disabled");
+          navbar.classList.remove("show");
+          menuBtn.classList.remove("hide");
+        }
+        window.onscroll = ()=>{
+          this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+        </script>
+
+    <section class="sectionfaq">
+        <h2 class="title">FAQs</h2>
+
+        <div class="faq">
+            <div class="question">
+                <h3>What is Qatar Expo 2023?</h3>
+
+                <svg width="25" height="20" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke=var(--bw) stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+                <p>
+                    The initial horticultural global expo in a desert enclosure, uniting art, technology, and plant growth enthusiasts. A celebration of horticultural innovation and eco-friendly living.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                <h3>What is the aim of Expo 2023?</h3>
+
+                <svg width="25" height="20" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke=var(--bw) stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+                <p>
+1.Host the first desert climate horticultural exhibition.
+<br>2.Foster global cooperation on environmental, cultural, and financial matters.
+<br>3.Tackle the worldwide challenge of Desertification.
+<br>4.Promote horticultural knowledge sharing for Qatar National Vision 2030 and encourage innovative horticulture in Qatar's climate.
+<br>5.Applying the Green City Concept in the Middle East.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                <h3>What is the plan of Expo 2023?</h3>
+
+                <svg width="25" height="20" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke=var(--bw) stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+                <p>
+                    The Al Bidda site will have three zones: <br> 1.International Area: Entrance with global gardens and events. <br> 2.Family Area: Hub for family activities and outdoor fun.<br> 3.Cultural Area: Perfect for cultural activities, near historical Doha.<br> Post-expo, it becomes a World Cup fan zone and Doha Grand Park.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner"></section>
+
+    <script>
+        var icon=document.getElementById("icon");
+        icon.onclick=function(){
+          document.body.classList.toggle("dark-theme");
+          if(document.body.classList.contains("dark-theme")){
+            icon.src="images/moon.png"
+          }else{
+            icon.src="images/sun.png"
+          }
+        }
+      </script>
+
+    <script>
+        const faqs=document.querySelectorAll(".faq");
+        faqs.forEach((faq)=>{
+            faq.addEventListener("click", ()=>{
+                faq.classList.toggle("active");
+            });
+        });
+    </script>
+<hr>
+<h4 class="footer">Contact Center: 184</h4><h4 class="footer">Main Office Contact: +974 444263489</h4><h4 class="footer">Main Email: info@dohaexpo2023.gov.qa</h4>
+
+<footer id="footer">
+    <h5>© Expo 2023 Doha, Qatar. All rights reserved</h5>
+  </footer>
+</body>
+</html>
